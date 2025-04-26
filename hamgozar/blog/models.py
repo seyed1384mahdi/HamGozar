@@ -30,5 +30,5 @@ class Subscription(BaseModel):
             raise ValidationError({'detail': 'You cannot subscribe yourself'})
 
     def __str__(self):
-        return f'{self.subscriber.enail} - {self.target.email}'
+        return f'{self.subscriber.email} - {self.target.email}'
 
