@@ -17,7 +17,7 @@ class OutputSubscribeSerializer(serializers.ModelSerializer):
         fields = ('username', )
 
     def get_username(self, subscription):
-        return getattr(subscription.target, subscription.target.USERNAME_FIELD)
+        return subscription.target.username
 
 
 class FilterSerializer(serializers.Serializer):
